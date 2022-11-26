@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .logol{
+            width:20%;
+            margin:100px 10px auto auto;
+        }
+        .search{
+            width: 50%;
+            background:red;
+            margin: 0 auto;
+            text-align: center;
+            display:flex;
+        }
+        .search_content{
+            width:80%;
+            height:30px;
+            float: left;
+            margin-left: 0;
+        }
+
+        .search_submit{
+            width:20%;
+            color:white;
+            /*background-color: dodgerblue;*/
+            background: dodgerblue;
+            border: none;
+            margin-right:0;
+        }
+
+    </style>
 </head>
 <body>
-    <div id="overview">hello world</div>
+
+    <div style="text-align:center">
+        <img class="logol" src="\static\logol.png" alt="logol">
+    </div>
+    <div class="search">
+        <input class="search_content" >
+        <button class="search_submit" >搜索</button>
+    </div>
+
 </body>
 </html>
