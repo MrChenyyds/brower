@@ -74,17 +74,17 @@
             </div>
         </div>
     </div>
-    <div th:each="aritcle:${articleList}">
-        <div th:if="${aritcle.id}%10==0">
+    <div th:each="article:${articleList}">
+        <div th:if="${article.id}%10==0">
             <div class="block1">
-                <h1 th:text="${aritcle.title}"></h1>
-                <p th:text="${aritcle.description}"></p>
+                <h1 th:text="${article.title}"></h1>
+                <p th:text="${article.description}"></p>
             </div>
         </div>
-        <div th:if="${aritcle.id}%10!=0">
+        <div th:if="${article.id}%10!=0">
             <div class="block">
-                <h1 th:text="${aritcle.title}"></h1>
-                <p th:text="${aritcle.description}"></p>
+                <h1 th:text="${article.title}"></h1>
+                <p th:text="${article.description}"></p>
             </div>
         </div>
     </div>
