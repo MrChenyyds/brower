@@ -39,8 +39,8 @@ xmlns:th="http://www.thymeleaf.org">
         <img class="logol" src="\static\logol.png" alt="logol">
     </div>
     <div class="search">
-        <input class="search_content" >
-        <button class="search_submit" >搜索</button>
+        <input th:value="${search_content}" class="search_content" >
+        <button th:href="@{/search_result.html}"  class="search_submit">搜索</button>
     </div>
 
 </body>

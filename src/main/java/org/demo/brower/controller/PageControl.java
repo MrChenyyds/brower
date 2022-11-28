@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -17,16 +19,17 @@ public class PageControl {
     @Autowired
     private ArticleService articleService;
 
-    @GetMapping(value = "/home")
+    @GetMapping(value = "/")
     public String getHomePage(HttpServletRequest request) {
         return "home";
     }
 
-    @GetMapping(value = "/search_result/page/{pageNumber}")
-    public String getArticles(Model model, @PathVariable("pageNumber") Integer pageNumber) {
-        List<Article> articleList=articleService.getArticleList(pageNumber);
+    @PostMapping(value="/search_result")
+    public String getResultPage(Model model,@RequestBody String search_content){
+        List<Article> articleList=articleService.getArticleList(search_content);
         model.addAttribute("articleList",articleList);
         return "search_result";
     }
+
 
 }

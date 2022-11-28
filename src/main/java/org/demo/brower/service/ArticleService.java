@@ -7,5 +7,5 @@ import java.util.List;
 
 @Service
 public interface ArticleService {
-    List<Article> getArticleList(int pageNumber);
+    List<Article> getArticleList(String content);
 }
