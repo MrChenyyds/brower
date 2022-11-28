@@ -10,6 +10,6 @@ public class MiddleProcess {
     LoadBalance loadBalance;
 
     private void addRequest(int page){
-
+        return;
     }
 }

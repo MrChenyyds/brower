@@ -31,7 +31,7 @@ public class RedisController {
 
     // 添加数据到redis
     public String addToRedis(String name, String value) {
-
+        return null;
     }
 
 }
