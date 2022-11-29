@@ -44,7 +44,7 @@
             width: 600px;
             height:200px;
             margin-left: 15%;
-            margin-top: 60px;
+            margin-top: 70px;
             background-color: white; //设置导航栏背景颜色
             display:flex;
             box-shadow: 0 1px 0 0 lightgrey;
@@ -59,6 +59,29 @@
             display:flex;
             box-shadow: 0 1px 0 0 lightgrey;
             white-space: nowrap;
+
+        }
+        .page{
+            width: 600px;
+            height:150px;
+            margin-left: 15%;
+            margin-top: 10px;
+            background-color: wheat; //设置导航栏背景颜色
+            display:flex;
+            box-shadow: 0 1px 0 0 lightgrey;
+            white-space: nowrap;
+        }
+        .line-limit-length {
+            margin-left: 5%;
+            font-size: 14px;
+            max-width: 500px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:3;
 
         }
 
@@ -87,7 +110,16 @@
                 <p th:text="${article.description}"></p>
             </div>
         </div>
-    </div>
 
+        <div class="page">
+                <h1 >
+                    <a href="test.html" title="进入目录" target="top">查看详情</a>
+                </h1>
+                <p class="line-limit-length">
+                    需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                </p>
+        </div>
+
+    </div>
 </body>
 </html>
