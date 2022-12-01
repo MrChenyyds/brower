@@ -4,48 +4,11 @@ xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <style>
-        .logol{
-            width:20%;
-            margin:100px 10px auto auto;
-        }
-        .search{
-            width: 50%;
-            margin: 0 auto;
-            text-align: center;
-            display:flex;
-        }
-        .search_content{
-            width:80%;
-            height:30px;
-            float: left;
-            margin-left: 0;
-        }
+    <script src="/static/js/include.js"></script>
 
-        .search_submit{
-            width:20%;
-            color:white;
-            /*background-color: dodgerblue;*/
-            background: dodgerblue;
-            border: none;
-            margin-right:0;
-        }
-
-    </style>
 </head>
-<body>
-
-    <div style="text-align:center">
-        <img class="logol" src="logol.png">
-    </div>
-
-    <form th:action="@{/search_result}" method="post">
-        <div class="search">
-            <input name="search_content" class="search_content" type="text">
-            <button type="submit">搜索</button>
-        </div>
-    </form>
-
-
+<body style="background:lightgrey;">
+    <include src="logol.html"></include>
+    <include src="searchbox.html"></include>
 </body>
 </html>
