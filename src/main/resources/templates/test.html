@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Results</title>
+    <title>Test</title>
     <style>
         .head {
             position: fixed;
@@ -10,8 +10,8 @@
             right: 0;
             top: 0;
             z-index: 999;//一直将导航栏置于最顶层
-        background: white; //设置导航栏背景颜色
-        display:flex;
+            background: white; //设置导航栏背景颜色
+            display:flex;
             box-shadow: 0 1px 0 0 lightgrey;
         }
         .logol{
@@ -120,34 +120,32 @@
 </head>
 <body style="background:#f5f5f5">
 
-<div th:each="article:${articleList}">
 
-    <div class="txt">
-        <h1>
-            <a href="test.html" title="进入目录" target="top">test</a>
-        </h1>
-        <p class="line-limit-length">
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-            需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-        </p>
-        <button class="search_submit"  >
-            <a href="search_result.html" title="返回上一页" target="top">返回上一页</a>
-        </button>
-    </div>
+        <div class="txt">
+            <h1>
+                <a th:href="@{/test}" th:text="title" target="top">test</a>
+            </h1>
+            <p class="line-limit-length">
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+                需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签,配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
+            </p>
+            <button class="search_submit"  >
+                <a th:href="@{/search_result}" title="返回上一页" target="top">返回上一页</a>
+            </button>
+        </div>
 
-</div>
 
 </body>
 </html>

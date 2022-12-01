@@ -28,5 +28,11 @@ public class PageControl {
         return "search_result";
     }
 
+    @PostMapping(value = "/test/{title}")
+    public String getTestPage(Model model,@RequestParam("title") String title) {
+        model.addAttribute("title",title);
+        return "test";
+    }
+
 
 }

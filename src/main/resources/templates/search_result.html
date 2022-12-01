@@ -99,25 +99,20 @@
     </div>
     <div th:each="article:${articleList}">
         <div th:if="${article.id}%10==0">
-            <div class="block1">
-                <h1 th:text="${article.title}"></h1>
-                <p th:text="${article.description}"></p>
+            <div class="page">
+                <h1 >
+                    <a th:href="@{/test}" th:text="${article.title}" target="top"></a>
+                </h1>
+                <p class="line-limit-length" th:text="${article.description}"></p>
             </div>
         </div>
         <div th:if="${article.id}%10!=0">
-            <div class="block">
-                <h1 th:text="${article.title}"></h1>
-                <p th:text="${article.description}"></p>
+            <div class="page">
+                    <h1 >
+                        <a  th:href="@{/test/{${article.title}}}"  th:text="${article.title}" target="top"></a>
+                    </h1>
+                    <p class="line-limit-length" th:text="${article.description}"></p>
             </div>
-        </div>
-
-        <div class="page">
-                <h1 >
-                    <a href="test.html" title="进入目录" target="top">查看详情</a>
-                </h1>
-                <p class="line-limit-length">
-                    需要用到css overflow,和text-overflow样式同时避免文字自动换行,我们使用html nobr标签强制内容不换行，使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用,使用使用注意这几个CSS样式和HTML标签配合使用才能达到多余文字内容出现省略号样式，大家下来灵活运用
-                </p>
         </div>
 
     </div>
