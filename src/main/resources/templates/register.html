@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link href="/static/css/login.css" rel="stylesheet" type="text/css">
+    <link href="login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div>
     <div class="welcome">欢迎回到 B201这个大家庭~</div>
     <div class="container">
         <div>
-            <img src="\static\img\register.png" alt="" />
+            <img src="register.png" alt="" />
         </div>
-        <div class="login-part" style="height: 18rem">
+        <div class="login-part" style="height: 20rem">
             <div class="some-tips">在这里注册您的账号</div>
-            <form>
+            <form th:action="@{/registerConfirm}" th:object:"${user}" method="post">
                 <p class="input-hit">* 用户名:  &nbsp&nbsp&nbsp&nbsp&nbsp
-                    <input class="input-content" type="text" name="userName">
+                    <input th:value="${user.userName}" class="input-content" type="text" name="userName">
                 </p>
                 <p class="input-hit">* 您的邮箱：
-                    <input class="input-content" type="email" name="userEmail">
+                    <input th:value="${user.userEmail}" class="input-content" type="email" name="userEmail">
                 </p>
                 <p class="input-hit">* 您的密码：
-                    <input class="input-content" type="password" name="userPassword">
+                    <input th:value="${user.userPassword}" class="input-content" type="password" name="userPassword">
                 </p>
-                <p class="input-hit">* 密码认证：
-                    <input class="input-content" type="password" name="userPasswordAgain">
+                <p class="input-hit">* 重复密码：
+                    <input th:value="${user.userPasswordAgain}" class="input-content" type="password" name="userPasswordAgain">
                 </p>
+                <div style="display: flex">
+                    <p class="input-hit">* 验证码：&nbsp&nbsp&nbsp&nbsp
+                        <input th:value="${user.code}" class="input-content" type="text" name="code" style="width: 50%">
+                    </p>
+                    <a th:href="@{/getcode(userEmail=${user.userEmail})}">获取验证码</a>
+                </div>
 
                 <div class="btn">
                     <div>

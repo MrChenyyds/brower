@@ -10,4 +10,6 @@ import java.util.List;
 public interface ArticleService {
 
     List<Article> getArticleList(String content);
+
+
 }
