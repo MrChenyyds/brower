@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 @Service
 public class UserLoginRegisterServiceImpl implements UserLoginRegisterService{
     @Resource
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String,String> redisTemplate;
 
     @Resource
     private JdbcTemplate jdbcTemplate;
