@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Register</title>
     <link href="login.css" rel="stylesheet" type="text/css">
+    <script src="register.js"></script>
 </head>
 <body>
 <div>
@@ -14,12 +15,12 @@
         </div>
         <div class="login-part" style="height: 20rem">
             <div class="some-tips">在这里注册您的账号</div>
-            <form th:action="@{/registerConfirm}" th:object:"${user}" method="post">
+            <form th:action="@{/registerConfirm}" th:object="${user}" method="post">
                 <p class="input-hit">* 用户名:  &nbsp&nbsp&nbsp&nbsp&nbsp
                     <input th:value="${user.userName}" class="input-content" type="text" name="userName">
                 </p>
                 <p class="input-hit">* 您的邮箱：
-                    <input th:value="${user.userEmail}" class="input-content" type="email" name="userEmail">
+                    <input th:value="${user.userEmail}" class="input-content" type="email" id="userEmail">
                 </p>
                 <p class="input-hit">* 您的密码：
                     <input th:value="${user.userPassword}" class="input-content" type="password" name="userPassword">
@@ -31,7 +32,8 @@
                     <p class="input-hit">* 验证码：&nbsp&nbsp&nbsp&nbsp
                         <input th:value="${user.code}" class="input-content" type="text" name="code" style="width: 50%">
                     </p>
-                    <a th:href="@{/getcode(userEmail=${user.userEmail})}">获取验证码</a>
+
+                    <a id="getcode"  href="javascript:void(0)" onclick="javascript:getUserName()">获取验证码</a>
                 </div>
 
                 <div class="btn">
