@@ -1,5 +1,8 @@
 package org.demo.brower.pojo;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class PasswordCheckResult {
     public static final int PASSWORD_WEAK = 0;
 
