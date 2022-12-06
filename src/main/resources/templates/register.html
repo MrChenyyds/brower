@@ -5,6 +5,8 @@
     <title>Register</title>
     <link href="login.css" rel="stylesheet" type="text/css">
     <script src="register.js"></script>
+    <!--	引入jQuery-->
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
 </head>
 <body>
 <div>
@@ -15,34 +17,32 @@
         </div>
         <div class="login-part" style="height: 20rem">
             <div class="some-tips">在这里注册您的账号</div>
-            <form th:action="@{/registerConfirm}" th:object="${user}" method="post">
+            <form>
                 <p class="input-hit">* 用户名:  &nbsp&nbsp&nbsp&nbsp&nbsp
-                    <input th:value="${user.userName}" class="input-content" type="text" name="userName">
+                    <input  class="input-content" type="text" id="userName">
                 </p>
                 <p class="input-hit">* 您的邮箱：
-                    <input th:value="${user.userEmail}" class="input-content" type="email" id="userEmail">
+                    <input class="input-content" type="email" id="userEmail">
                 </p>
                 <p class="input-hit">* 您的密码：
-                    <input th:value="${user.userPassword}" class="input-content" type="password" name="userPassword">
+                    <input class="input-content" type="password" id="userPassword">
                 </p>
                 <p class="input-hit">* 重复密码：
-                    <input th:value="${user.userPasswordAgain}" class="input-content" type="password" name="userPasswordAgain">
+                    <input  class="input-content" type="password" id="userPasswordAgain">
                 </p>
                 <div style="display: flex">
                     <p class="input-hit">* 验证码：&nbsp&nbsp&nbsp&nbsp
-                        <input th:value="${user.code}" class="input-content" type="text" name="code" style="width: 50%">
+                        <input  class="input-content" type="text" id="code" style="width: 50%">
                     </p>
-
-                    <a id="getcode"  href="javascript:void(0)" onclick="javascript:getUserName()">获取验证码</a>
+                    <a id="getcode"  href="javascript:void(0)" >获取验证码</a>
                 </div>
 
                 <div class="btn">
                     <div>
-                        <input class="but-buttom" style="background-color: cornflowerblue" type="submit"  value="确认" name="submit">
-                        <input class="but-buttom" type="reset" value="取消" name="cancel">
+                        <input class="but-buttom" style="background-color: cornflowerblue" type="submit"  value="确认" id="submit">
                     </div>
                     <div>
-                        <input class="but-buttom" type="submit" value="注册" name="toregister">
+                        <input class="but-buttom" type="reset" value="取消" id="cancel">
                     </div>
                 </div>
             </form>

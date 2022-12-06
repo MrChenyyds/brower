@@ -1,11 +1,11 @@
 package org.demo.brower.pojo;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Component
 public class RegisterUser {
 

@@ -9,6 +9,8 @@ import org.demo.email.config.Email;
 import org.demo.email.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +36,7 @@ public class UserLoginRegisterServiceImpl implements UserLoginRegisterService{
         String key = username+"RegisterCode";
         Random random=new Random();
         int code = random.nextInt(900000)+100000;
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
         redisTemplate.opsForValue().set(key,String.valueOf(code),5, TimeUnit.MINUTES);
         return String.valueOf(code);
     }
